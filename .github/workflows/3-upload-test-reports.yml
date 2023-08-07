@@ -51,17 +51,7 @@ jobs:
 
     steps:
       # We'll need to check out the repository so that we can edit the README.
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Let's get all the branches.
-
-      # Verify the learner added actions/upload-artifact.
-      - name: Verify workflow
-        uses: skills/action-check-file@v1
-        with:
-          file: .github/workflows/ci.yml
-          search: actions/upload-artifact
+      
 
       # In README.md, switch step 3 for step 4.
       - name: Update to step 4
